@@ -1,0 +1,72 @@
+<html>
+    <script>
+        function form(){
+            document.write("hello");
+        }
+    </script>
+    <head><h2> Registration Form</h2></head>
+    <body align = "center">
+        <form method = "POST">
+            <table align = "center">
+                <tr>
+                <td> Name : </td>
+                <td>
+                    <input type = "text" size = "30" name = "username" placeholder="Enter Your Name" required />
+                </td>
+            </tr>
+            <tr>
+                <td> Email Id :</td>
+                <td>
+                    <input type ="email" size="30" name="email" placeholder="Enter Your Email" required/>
+                </td>
+            </tr>
+            <tr>
+                <td> Password :</td>
+                <td>
+                    <input type = "password" size="30" name=" password" placeholder="Enter Your Password" required/>
+                </td>
+            </tr>
+            <tr>
+                <td> Phone Number :</td>
+                <td>
+                    <input type="phone" maxlength = "10" size="30" name="phone" placeholder="Enter Your Number"/>
+                </td>
+            </tr>
+            <tr>
+                <td> Gender : </td>
+                <td>
+                    <input type="radio" name="gender"/> Male
+                    <input type="radio" name="gender"/> Female
+                </td>
+            </tr>
+            <tr>
+                <td> Subject : </td>
+                <td>
+                    <input type="checkbox" name="subject"/> Java
+                    <input type="checkbox" name="subject"/>HTML 
+                    <input type="checkbox" name="subject"/> CSS
+                </td>
+            </tr>
+            <tr>
+                <td> Education : </td>
+                <td>
+                    <select name="education">
+                        <option> Select Option</option>
+                        <option> 10th</option>
+                        <option> Inter</option>
+                        <option> Graduate</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> Address : </td>
+                <td>
+                    <textarea rows="5" cols="30"></textarea>
+                </td>
+            </tr>
+            </table><br/>
+            <input type="reset" name="clear"/>
+            <input type="submit" name="submit" onclick="form()"/>
+        </form>
+    </body>
+</html>
