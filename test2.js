@@ -1,6 +1,6 @@
 class MyClass{
     constructor(){
-        console.log("Automation Starts Here");
+        console.log("Automation starts Here");
     }
 
     add(arg1,arg2){
@@ -11,19 +11,19 @@ class MyClass{
 
     sub(arg1,arg2){
         var result;
-        result=arg1-arg2;
+        result = arg1 - arg2;
         return result;
     }
 
     multi(arg1,arg2){
         var result;
-        result = arg1*arg2;
+        result = arg1 * arg2;
         return result;
     }
 
     div(arg1,arg2){
         var result;
-        result = arg1/arg2;
+        result = arg1 / arg2;
         return result;
     }
 
@@ -36,5 +36,4 @@ class MyClass{
         callback();
     }
 }
-
-module.exports= MyClass;
+module.exports = MyClass;
