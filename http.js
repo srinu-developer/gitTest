@@ -9,7 +9,6 @@
 const http = require('http');
 
 http.createServer(function(req,res){
-    console.log("welcome to this page");
-    res.write("welcome to this page");
+    res.write("welcome");
     res.end();
-}).listen(9000);
+}).listen(9090);

@@ -5,18 +5,17 @@ const expect = chai.expect;
 const MyClass = require('./test2.js');
 const myObj = new MyClass();
 
-describe("Automation TestCases", ()=>{
-
+describe("Automation for Few operations", ()=>{
     it("Test case for Addition", ()=>{
         expect(myObj.add(2,2)).to.be.equal(4);
     })
 
-    it("Test case fot Subtraction", ()=>{
+    it("Test case for Subtraction", ()=>{
         expect(myObj.sub(4,2)).to.be.equal(2);
     })
 
-    it("Test case for Multiplication",()=>{
-        expect(myObj.multi(2,2)).to.be.equal(4);
+    it("Test case for multiplication", ()=>{
+        expect(myObj.multi(3,3)).to.be.equal(9);
     })
 
     it("Test case for Divison", ()=>{
@@ -24,16 +23,16 @@ describe("Automation TestCases", ()=>{
     })
 
     it("Test case for Sinon", ()=>{
-        let spy = new sinon.spy(myObj,"add");
-        let arg1=10,arg2=20;
+        var spy = sinon.spy(myObj, "add");
+        var arg1 =10, arg2=20;
         myObj.callAnotherFn(arg1,arg2);
         sinon.assert.calledOnce(spy);
         expect(spy.calledOnce).to.be.true;
     })
 
-    it("Test case for spy", ()=>{
-        let callback = new sinon.spy();
+    it("Test case for SPY", ()=>{
+        var callback = sinon.spy();
         myObj.call(callback);
         expect(callback.calledOnce).to.be.true;
     })
-})    
+})
