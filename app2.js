@@ -1,20 +1,29 @@
 const mocha = require('mocha');
-const sinon = require('sinon');
 const chai = require('chai');
 const expect = chai.expect;
+const sinon = require('sinon');
 const MyClass = require('./test2.js');
 const myObj = new MyClass();
 
-describe("Automation for Few operations", ()=>{
+describe("Test cases for few operations", ()=>{
+
+    before(function(){
+        console.log("------Starts Here -------");
+    })
+
+    after(function(){
+        console.log("------- Ends Here -------")
+    })
+
     it("Test case for Addition", ()=>{
-        expect(myObj.add(2,2)).to.be.equal(4);
+        expect(myObj.add(5,5)).to.be.equal(10);
     })
 
     it("Test case for Subtraction", ()=>{
-        expect(myObj.sub(4,2)).to.be.equal(2);
+        expect(myObj.sub(4,3)).to.be.equal(1);
     })
 
-    it("Test case for multiplication", ()=>{
+    it("Test case for Multiplication", ()=>{
         expect(myObj.multi(3,3)).to.be.equal(9);
     })
 
@@ -22,7 +31,7 @@ describe("Automation for Few operations", ()=>{
         expect(myObj.div(4,2)).to.be.equal(2);
     })
 
-    it("Test case for Sinon", ()=>{
+    it("Test case for sinon", ()=>{
         var spy = sinon.spy(myObj, "add");
         var arg1 =10, arg2=20;
         myObj.callAnotherFn(arg1,arg2);
