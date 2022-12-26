@@ -6,9 +6,9 @@
     
 // }).listen(8080);
 
-const http = require('http');
+const http = require("http");
 
 http.createServer(function(req,res){
-    res.write("welcome");
+    res.write("Hello world");
     res.end();
 }).listen(9090);

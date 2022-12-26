@@ -1,45 +1,45 @@
 const mocha = require('mocha');
+const sinon = require('sinon');
 const chai = require('chai');
 const expect = chai.expect;
-const sinon = require('sinon');
 const MyClass = require('./test2.js');
 const myObj = new MyClass();
 
-describe("Test cases for few operations", ()=>{
+describe("Autpmation for few operations",()=>{
 
     before(function(){
-        console.log("------Starts Here -------");
+        console.log("--------- Starts Here----------")
     })
 
     after(function(){
-        console.log("------- Ends Here -------")
+        console.log("--------Ends Here---------");
     })
 
-    it("Test case for Addition", ()=>{
-        expect(myObj.add(5,5)).to.be.equal(10);
+    it("Test case for addition",()=>{
+        expect(myObj.add(2,5)).to.be.equal(7);
     })
 
-    it("Test case for Subtraction", ()=>{
-        expect(myObj.sub(4,3)).to.be.equal(1);
+    it("Test case for subtraction",()=>{
+        expect(myObj.sub(10,6)).to.equal(4);
     })
 
-    it("Test case for Multiplication", ()=>{
-        expect(myObj.multi(3,3)).to.be.equal(9);
+    it("Test case for multiplication",()=>{
+        expect(myObj.multi(5,5)).to.be.equal(25);
     })
 
-    it("Test case for Divison", ()=>{
-        expect(myObj.div(4,2)).to.be.equal(2);
+    it("Test case for divison",()=>{
+        expect(myObj.div(8,2)).to.be.equal(4);
     })
 
-    it("Test case for sinon", ()=>{
-        var spy = sinon.spy(myObj, "add");
-        var arg1 =10, arg2=20;
+    it("Test case for Sinon",()=>{
+        var spy = sinon.spy(myObj,"add");
+        var arg1=10,arg2=20;
         myObj.callAnotherFn(arg1,arg2);
         sinon.assert.calledOnce(spy);
         expect(spy.calledOnce).to.be.true;
     })
 
-    it("Test case for SPY", ()=>{
+    it("Test case for spy",()=>{
         var callback = sinon.spy();
         myObj.call(callback);
         expect(callback.calledOnce).to.be.true;

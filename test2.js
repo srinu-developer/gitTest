@@ -4,22 +4,22 @@ class MyClass{
     }
 
     add(arg1,arg2){
-        var result = arg1 + arg2;
+        var result = arg1+arg2;
         return result;
     }
 
     sub(arg1,arg2){
-        var result = arg1 - arg2;
+        var result = arg1-arg2;
         return result;
     }
 
     multi(arg1,arg2){
-        var result = arg1 * arg2;
+        var result = arg1*arg2;
         return result;
     }
 
     div(arg1,arg2){
-        var result = arg1 / arg2;
+        var result = arg1/arg2;
         return result;
     }
 
@@ -32,4 +32,5 @@ class MyClass{
         callback();
     }
 }
+
 module.exports = MyClass;
