@@ -32,5 +32,4 @@ class MyClass{
         callback();
     }
 }
-
 module.exports = MyClass;
